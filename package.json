@@ -14,8 +14,7 @@
         "typescript": "^4.7.4"
     },
     "scripts": {
-        "test": "jest BinarySearchList",
-        "clear": "node ./scripts/clear.js",
+        "test": "jest BubbleSort",
         "prettier": "prettier --write ./src",
         "generate": "node ./scripts/generate.js",
         "day": "echo src\\day1"

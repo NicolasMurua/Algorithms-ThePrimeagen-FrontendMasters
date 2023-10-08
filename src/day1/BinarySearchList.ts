@@ -16,3 +16,22 @@ export default function bs_list(haystack: number[], needle: number): boolean {
     }
     return false
 }  
+// mid=floor(low + (high - low) / 2)
+//in this way of calculating the mid point basically it adds low (meaning the offset from the beginnig) and the range bewteen high and low.
+//The other big difference is that Prime uses "min < max" and max = mid meaning [low, high)
+function BinarySearchPrime(array:number [], value:number):boolean {
+    let low = 0;
+    let high = array.length;
+    do {
+        const mid = Math.floor(low + (high - low) /2 );
+        const v = array[mid];
+        if (v === value){
+            return true;
+        } else if(v > value){
+            high = mid
+        } else {
+            low = mid +1
+        }
+    }while (low < high)
+    return false
+}
