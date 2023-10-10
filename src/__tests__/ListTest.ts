@@ -1,7 +1,7 @@
 export function test_list(list: List<number>): void {
-    list.append(5);
-    list.append(7);
+    list.insertAt(5, 0);
     list.append(9);
+    list.insertAt(7, 1);
 
     expect(list.get(2)).toEqual(9);
     expect(list.removeAt(1)).toEqual(7);
